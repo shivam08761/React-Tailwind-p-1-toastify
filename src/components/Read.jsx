@@ -1,10 +1,15 @@
 import React from 'react'
 import {toast} from 'react-toastify'
+import { useContext } from 'react'
+import { contexttodo } from '../Wrapper.jsx'
 
-const Read = (props) => {
+
+const Read = () => {
+    const [todos,settodos] = useContext(contexttodo);
+
     
-    const todos = props.todos;
-    const settodos = props.settodos;
+    // const todos = props.todos;
+    // const settodos = props.settodos;
 
 
   const deletehandler  = (id) =>{
